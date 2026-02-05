@@ -1,0 +1,9 @@
+I've executed the following linux commands for linux practice on day-4 
+
+ps : list the process running on your computer ()
+top : displays details of running processes and programs and also tells about the resources being used()
+pgrep :used to search process by name and returns the process id()
+systemctl status : commands the system to tell the status of system ()
+systemctl list-units : commands the system to list the units, devices and services running on the system()
+journalctl - u acpid.service : logs the detail about acpip.service ()
+tail hello.txt : logs last 10 lines of the file ()
