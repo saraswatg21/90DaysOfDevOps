@@ -1,9 +1,9 @@
 I've executed the following linux commands for linux practice on day-4 
 
-ps : list the process running on your computer ()
-top : displays details of running processes and programs and also tells about the resources being used()
-pgrep :used to search process by name and returns the process id()
-systemctl status : commands the system to tell the status of system ()
-systemctl list-units : commands the system to list the units, devices and services running on the system()
-journalctl - u acpid.service : logs the detail about acpip.service ()
-tail hello.txt : logs last 10 lines of the file ()
+ps : list the process running on your computer (2026/day-04/Screenshot 2026-02-05 155729.png)
+top : displays details of running processes and programs and also tells about the resources being used(2026/day-04/Screenshot 2026-02-05 160034.png)
+pgrep :used to search process by name and returns the process id(2026/day-04/Screenshot 2026-02-05 160128.png)
+systemctl status : commands the system to tell the status of system (2026/day-04/Screenshot 2026-02-05 160329.png)
+systemctl list-units : commands the system to list the units, devices and services running on the system(2026/day-04/Screenshot 2026-02-05 160617.png)
+journalctl - u acpid.service : logs the detail about acpip.service (2026/day-04/Screenshot 2026-02-05 161527.png)
+tail hello.txt : logs last 10 lines of the file (2026/day-04/Screenshot 2026-02-05 161926.png)
