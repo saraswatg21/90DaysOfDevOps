@@ -70,7 +70,7 @@ These are foundational skills for any DevOps engineer.
 
 ![Nginx screenshot](nginx-webpage.png)
 ![Nginx logs screenshot](Nginx-screenshot.png)
-![ssh screenshot](ssh-connection.png)
+![ssh screenshot](ssh-screenshot.png)
 
 ---
 
