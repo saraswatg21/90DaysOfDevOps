@@ -67,20 +67,11 @@ These are foundational skills for any DevOps engineer.
 
 ---
 
-## Submission Checklist
-
-* [x] `day-08-cloud-deployment.md`
-* [x] `nginx-logs.txt`
-* [x] `ssh-connection.png`
-* [x] `nginx-webpage.png`
-* [x] `docker-nginx.png`
 
 ![Nginx screenshot](nginx-webpage.png)
-![docker screenshot](docker-nginx.png)
+![Nginx logs screenshot](Nginx-screenshot.png)
 ![ssh screenshot](ssh-connection.png)
 
 ---
 
-**Status:** Day 08 completed successfully 🚀
 
-#90DaysOfDevOps #DevOpsKaJosh #TrainWithShubham
