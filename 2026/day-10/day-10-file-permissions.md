@@ -56,7 +56,7 @@ Output:
 
 ## Screenshot Proof
 
-![Task1]()
+![Task1](Day10_Task1.png)
 
 ---
 
@@ -112,7 +112,7 @@ nairobi:x:1004:1006::/home/nairobi:/bin/sh `
 
 ## Screenshot Proof
 
-![Task2]()
+![Task2](Day10_Task2.png)
 
 ---
 
@@ -151,7 +151,7 @@ No execute permission
 
 ## Screenshot Proof
 
-![Task3]()
+![Task3](Day10_Task3.png)
 
 ---
 
@@ -237,7 +237,8 @@ Command:
 
 ## Screenshot Proof
 
-![Task4]()
+![Task4](Day10Task4_1.png)
+![Task4](Day10Task4_2.png)
 
 ---
 
@@ -265,7 +266,7 @@ Error:
 
 ## Screenshot Proof
 
-![Task4]()
+(![Task5](Day10Task5.png))
 
 ---
 
