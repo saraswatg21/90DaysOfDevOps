@@ -5,7 +5,7 @@
 ###  What happens when you type `google.com` in a browser?
 1. Browser checks cache for IP  
 2. If not found, it queries DNS resolver  
-3. DNS resolver asks root → TLD → authoritative server  
+3. DNS resolver asks root → TLD(Top Level Domain , For ex: .com , .in , .org ) → authoritative server  
 4. IP address is returned and browser connects to server  
 
 ---
