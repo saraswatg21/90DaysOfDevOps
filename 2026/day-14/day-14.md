@@ -141,44 +141,8 @@ Connection to localhost (127.0.0.1) 22 port [tcp/ssh] succeeded!
 ```
 
 **Interpretation:**
-- ✅ Port 22 is **reachable** from localhost — SSH daemon is up and accepting connections.
+- Port 22 is **reachable** from localhost — SSH daemon is up and accepting connections.
 - If it had **failed**: next checks would be `systemctl status sshd` (is the service running?) and `ufw status` / `iptables -L` (is a firewall blocking it?).
 
 ---
 
-## Reflection
-
-### Which command gives the fastest signal when something is broken?
-
-**`ping`** — one command, instant yes/no on L3 reachability. If ping fails, you know the problem is at the network layer or below (routing, firewall, interface down) before you even touch DNS or HTTP.
-
-### What layer would you inspect next if…
-
-| Symptom | Next Layer to Inspect | Command |
-|---------|----------------------|---------|
-| **DNS fails** | L3 (Internet) → is the resolver reachable? | `ping 8.8.8.8`, `dig @8.8.8.8 google.com` |
-| **HTTP 500** | L7 (Application) → server-side error | `curl -v`, check app logs (`journalctl`, `/var/log/nginx/error.log`) |
-
-- DNS failure: first check if raw IP works (`ping 8.8.8.8`) — if yes, the issue is purely at the DNS/Application layer, not the network.
-- HTTP 500: the network is fine; the problem lives in the application — inspect server logs, check DB connections, look for exceptions.
-
-### Two follow-up checks in a real incident
-
-1. **`curl -v <url>`** — verbose output shows TLS handshake, redirect chain, and full response headers; isolates whether it's a DNS, TCP, TLS, or HTTP-level failure.
-2. **`journalctl -u <service> -n 50 --no-pager`** — last 50 log lines of the failing service; usually reveals the root cause (port conflict, config error, auth failure) in seconds.
-
----
-
-## Learn in Public 🚀
-
-> Practiced the core network troubleshooting stack today:
-> `ping` → `traceroute` → `ss -tulpn` → `dig` → `curl -I`
->
-> Interesting find: `curl -I https://google.com` returns a **301**, not 200 — Google always redirects bare `google.com` to `www.google.com`. A small reminder that HTTP status codes tell a story.
-> Also noticed `traceroute` has several `* * *` hops mid-path — ISPs silently drop TTL-exceeded ICMP. Not a fault; just good to know when reading a trace.
->
-> #90DaysOfDevOps #DevOpsKaJosh #TrainWithShubham
-
----
-
-*Completed: Day 14 | Path: `2026/day-14/day-14-networking.md`*
