@@ -8,37 +8,33 @@
 ### 📄 for_loop.sh
 ```bash
 #!/bin/bash
-
-fruits=("Apple" "Banana" "Mango" "Orange" "Grapes")
+fruits=("Apple" "Banana" "Dragon Fruit" "Papaya" "Pomogrenate")
 
 for fruit in "${fruits[@]}"; do
-    echo "$fruit"
+        echo $fruit
 done
-```
-**📊 Output**
-```text
-Apple
-Banana
-Mango
-Orange
-Grapes
-```
-
-### 📄 count.sh
-```bash
-#!/bin/bash
 
 for i in {1..10}; do
-    echo "$i"
+        echo "$i"
 done
 ```
 **📊 Output**
 ```text
-1
-2
-3
-...
-10
+ Apple
+ Banana
+ Dragon Fruit
+ Papaya
+ Pomogrenate
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
 ```
 
 ---
@@ -48,26 +44,24 @@ done
 ### 📄 countdown.sh
 ```bash
 #!/bin/bash
-
-read -p "Enter a number: " num
+read -p "Enter a num: " num
 
 while [ "$num" -ge 0 ]; do
-    echo "$num"
-    ((num--))
+        echo "$num"
+        ((num--))
 done
 
-echo "Done!"
+echo "Bss khatam"
 ```
 **📊 Output**
 ```text
-Enter a number: 5
-5
+Enter a num: 4
 4
 3
 2
 1
 0
-Done!
+Bss khatam
 ```
 
 ---
@@ -101,10 +95,11 @@ echo "All arguments: $@"
 ```
 **📊 Output**
 ```bash
-./args_demo.sh one two three
-# Script name: ./args_demo.sh
-# Total arguments: 3
-# All arguments: one two three
+./greet.sh Govind Saraswat Devops Engineer
+Hello Govind
+Script name : ./greet.sh
+Total arguments : 4
+All arguments : Govind Saraswat Devops Engineer
 ```
 
 ---
@@ -137,6 +132,13 @@ done
 **▶️ Run**
 ```bash
 sudo ./install_packages.sh
+```
+**📊 Output**
+```bash
+sudo ./install_packages.sh
+nginx is already installed
+curl is already installed
+wget is already installed
 ```
 
 ---
